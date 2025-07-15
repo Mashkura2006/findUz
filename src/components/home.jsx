@@ -28,7 +28,6 @@ return(
 )
 }
 
-
 export const Showcase = () => {
     return(
         <section className="showcase flex items-center justify-center text-center w-full h-screen px-12 bg-blue-50 flex-col leading-relaxed">
