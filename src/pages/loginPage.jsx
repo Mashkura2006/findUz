@@ -1,10 +1,7 @@
-
-
-export const LoginPage = () => {
-    return(
-        <div>
-            <h2>login page</h2>
-        </div>
-    )
-}
-
+export const Login = () => {
+  return (
+    <div>
+      <h2>login page</h2>
+    </div>
+  );
+};
