@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const Navbar = () => {
@@ -22,7 +23,7 @@ return(
                 <label htmlFor="menu" className="label2"></label>
         </div>
         <div className="btn flex items-center gap-4">
-            <button className="bg-blue-900 border-2 border-blue-900 text-xl md:px-8 px-6 rounded-md transition duration-700 md:py-2 py-[5px] hover:bg-white hover:text-blue-950 text-white">Kirish</button>
+            <button className="bg-blue-900 border-2 border-blue-900 text-xl md:px-8 px-6 rounded-md transition duration-700 md:py-2 py-[5px] hover:bg-white hover:text-blue-950 text-white"><Link to="/login">Kirish</Link></button>
             <label htmlFor="menu" className="label1"><Menu size={46} color="darkblue"/></label>
         </div>
     </nav>
