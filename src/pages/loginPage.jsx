@@ -1,26 +1,51 @@
+import { use } from "react"
 import { Link } from "react-router-dom"
 
 export const Login = () => {
 
   
+    const auth_API = "https://api/schema/auth/token/" 
 
+    function handleLogin(event) {
+
+        const [name, setName] = useState("")
+        const [password, setPassword] = useState("")
+
+        const login = async(e) => {
+            e.preventDefault();
+            try {
+                const response = await axios.post(auth_API, {
+                    username: name,
+                    password: password
+                })
+                if (response.status === 200) {
+                    console.log("Login successful", response.data);
+                } else {
+                    console.error("Login failed", response.data);
+                }
+            } catch (error) {
+                console.error("Login error", error);
+            }
+    }
+    }
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-2">
             <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row w-full lg:max-w-3xl max-w-2xl lg:my-0 mt-32 mb-10">
-                <div className="flex flex-col gap-6 p-8 md:w-1/2 border-b md:border-b-0 md:border-r">
+                <form className="flex flex-col gap-6 p-8 md:w-1/2 border-b md:border-b-0 md:border-r">
                     <h2 className="text-2xl font-bold text-blue-700 mb-2">KIRISH</h2>
                     <div>
                         <label className="block text-sm mb-1">Telefon raqam:</label>
-                        <input type="tel" className="border rounded px-3 py-2 w-full" />
+                        <input type="tel" className="border rounded px-3 py-2 w-full" defaultValue={+998} />
                     </div>
                     <div>
                         <label className="block text-sm mb-1">Parol:</label>
                         <input type="password" className="border rounded px-3 py-2 w-full" />
                     </div>
+                    <button className="bg-blue-500 text-white rounded px-4 py-2" type="submit" onClick={handleLogin}>Kirish</button>
                     <Link to="forget_password" className="text-blue-500 text-sm hover:underline">Parolni unutdingizmi?</Link>
                     <Link to="register" className="text-blue-500 text-sm hover:underline">Ro'yxatdan o'tish</Link>
-                </div>
+                </form>
                 {/* Biz haqimizda */}
                 <div className="flex flex-col gap-4 p-8 md:w-1/2 justify-center">
                     <h2 className="text-xl font-bold text-red-700 mb-2">Biz haqimizda</h2>
