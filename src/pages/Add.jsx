@@ -47,12 +47,12 @@ export const AddItem = () => {
         className="flex flex-col gap-5 bg-blue-100 p-8 rounded-2xl"
       >
         <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
-          Add Lost Item
+          Yo'qolgan buyum qo'shish
         </h2>
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
           <span className="flex items-center gap-1">
-            Item Name<span className="text-blue-500">*</span>
+            Narsa nomi<span className="text-blue-500">*</span>
           </span>
           <input
             type="text"
@@ -67,7 +67,7 @@ export const AddItem = () => {
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
           <span className="flex items-center gap-1">
-            Category<span className="text-blue-500">*</span>
+            Kategoriya<span className="text-blue-500">*</span>
           </span>
           <select
             name="category"
@@ -84,7 +84,7 @@ export const AddItem = () => {
         </label>
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
-          <span>Photo</span>
+          <span>Rasm yuklang</span>
           <input
             type="file"
             name="photo"
@@ -103,7 +103,7 @@ export const AddItem = () => {
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
           <span className="flex items-center gap-1">
-            Address 1<span className="text-blue-500">*</span>
+            Manzil 1<span className="text-blue-500">*</span>
           </span>
           <input
             type="text"
@@ -117,7 +117,7 @@ export const AddItem = () => {
         </label>
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
-          <span>Address 2</span>
+          <span>Manzil 2</span>
           <input
             type="text"
             name="address2"
@@ -130,7 +130,7 @@ export const AddItem = () => {
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
           <span className="flex items-center gap-1">
-            Your Name<span className="text-blue-500">*</span>
+            Ismingiz<span className="text-blue-500">*</span>
           </span>
           <input
             type="text"
@@ -145,7 +145,7 @@ export const AddItem = () => {
 
         <label className="flex flex-col gap-1 text-blue-900 font-medium">
           <span className="flex items-center gap-1">
-            Phone<span className="text-blue-500">*</span>
+            Telefon raqam<span className="text-blue-500">*</span>
           </span>
           <input
             type="tel"
@@ -163,7 +163,7 @@ export const AddItem = () => {
           className="mt-2 py-3 px-6 bg-blue-700  submit:bg-blue-700 hover:bg-blue-500 text-white font-bold rounded-lg shadow-lg transition-all duration-200 text-lg tracking-wide"
         >
           <span className="inline-block align-middle text-blue-100 mr-2"></span>
-          Submit
+          Qo'shish
         </button>
       </form>
     </div>
