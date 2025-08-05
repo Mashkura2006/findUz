@@ -1,10 +1,11 @@
 import React from "react";
+import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Showcase } from "./pages/home.jsx";
-import { Routes } from "react-router-dom";
 import { Navbar } from "./layout/navbar.jsx";
 import { Login } from "./pages/loginPage.jsx";
 import { AddItem } from "./pages/Add.jsx";
+import { LostItems } from "./pages/LostItems.jsx";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route index element={<Showcase />} />
           <Route path="/login" element={<Login />} />
           <Route path="/add" element={<AddItem />} />
-          {/* <Route path="/lost" element={<LostItems />} /> */}
+          <Route path="/lost" element={<LostItems />} />
           {/* <Route path="/found" element={<FoundItems />} /> */}
         </Route>
       </Routes>
